@@ -45,10 +45,6 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.06);
     }
 
-    .info-box strong {
-      color: #0f172a;
-    }
-
     /* STATISTIK MINI */
     .stat-wrap {
       display: flex;
@@ -81,13 +77,12 @@
       color: var(--muted);
     }
 
-    /* Hover */
     .stat-item:hover {
       transform: translateY(-6px);
       box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     }
 
-    /* ILUSTRASI AKHIR / RINGKASAN */
+    /* RINGKASAN */
     .bottom-illustration {
       margin-top: 40px;
       width: 100%;
@@ -98,51 +93,22 @@
       border: 1px solid rgba(0,0,0,0.05);
     }
 
-    .bottom-illustration h2 {
-      margin-top: 0;
-      font-weight: 600;
-      color: #1a2b6d;
-    }
+    /* Animation */
+    .fade-in { opacity: 0; animation: fadeIn 1.2s ease-out forwards; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px);} to { opacity:1; transform: translateY(0);} }
 
-    .bottom-illustration ul li {
-      margin-bottom: 6px;
-    }
-
-    /* ======================================
-              ✨ ANIMATION SYSTEM ✨
-       ======================================*/
-
-    /* Fade-in */
-    .fade-in {
-      opacity: 0;
-      animation: fadeIn 1.2s ease-out forwards;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* Slide right */
-    .slide-right {
-      opacity: 0;
-      animation: slideRight 1.2s ease-out forwards;
-    }
+    .slide-right { opacity:0; animation: slideRight 1.2s ease-out forwards; }
     @keyframes slideRight {
       from { opacity:0; transform: translateX(-25px); }
-      to   { opacity:1; transform: translateX(0); }
+      to { opacity:1; transform: translateX(0); }
     }
 
-    /* Zoom soft */
-    .zoom-in {
-      opacity: 0;
-      animation: zoomIn 1s ease-out forwards;
-    }
+    .zoom-in { opacity:0; animation: zoomIn 1s ease-out forwards; }
     @keyframes zoomIn {
-      from { opacity:0; transform: scale(0.95); }
-      to   { opacity:1; transform: scale(1); }
+      from { opacity:0; transform: scale(0.95);}
+      to { opacity:1; transform: scale(1);}
     }
 
-    /* Delays */
     .delay-1 { animation-delay: .2s; }
     .delay-2 { animation-delay: .35s; }
     .delay-3 { animation-delay: .5s; }
@@ -152,100 +118,98 @@
 
 <body>
 
-  <!-- HEADER -->
-  <header class="site-header small fade-in">
-    <div class="container header-inner">
-      <a class="logo" href="index.html">Analisis Geografis</a>
-      <nav class="nav">
-        <a href="index.html">Beranda</a>
-        <a href="pendahuluan.html" class="active">Pendahuluan</a>
-        <a href="peta.html">Peta</a>
-        <a href="kesimpulan.html">Kesimpulan</a>
-      </nav>
-    </div>
-  </header>
+<header class="site-header small fade-in">
+  <div class="container header-inner">
+    <a class="logo" href="index.html">Analisis Geografis</a>
+    <nav class="nav">
+      <a href="index.html">Beranda</a>
+      <a href="pendahuluan.html" class="active">Pendahuluan</a>
+      <a href="peta.html">Peta</a>
+      <a href="kesimpulan.html">Kesimpulan</a>
+    </nav>
+  </div>
+</header>
 
-  <main class="container content fade-in">
+<main class="container content fade-in">
 
-    <!-- Gambar di Samping -->
-    <div class="intro-wrap fade-in">
-      <div class="intro-img fade-in delay-1"></div>
+  <div class="intro-wrap fade-in">
+    <div class="intro-img fade-in delay-1"></div>
 
-      <div class="intro-text">
-        <h1 class="fade-in delay-1">Pendahuluan</h1>
-        <p class="fade-in delay-2">
-          Kekerasan terhadap anak merupakan isu penting yang memengaruhi perkembangan psikologis, emosional, dan sosial anak.
-          Melalui pendekatan <strong>Sistem Informasi Geografis (SIG)</strong>, pola persebaran kasus dapat dipetakan secara visual
-          sehingga pemerintah dan lembaga perlindungan dapat menyusun intervensi yang lebih tepat sasaran.
-        </p>
+    <div class="intro-text">
+      <h1 class="fade-in delay-1">Pendahuluan</h1>
 
-        <div class="info-box fade-in delay-3">
-          <strong>Pentingnya Analisis Spasial:</strong><br>
-          Data geografis membantu mengungkap wilayah risiko tinggi, area dengan peningkatan laporan, serta kecenderungan
-          spasial yang tidak terlihat hanya dari data tabular.
-        </div>
-
-        <h2 class="slide-right">Tujuan Penelitian</h2>
-        <ul class="slide-right delay-1">
-          <li>Mengidentifikasi persebaran kasus kekerasan anak di Jawa Tengah.</li>
-          <li>Membandingkan pola kasus antara tahun 2022 dan 2023.</li>
-          <li>Menyediakan visualisasi peta tematik berbasis QGIS sebagai alat analisis.</li>
-        </ul>
-
-        <h2 class="slide-right delay-2">Metode Pengolahan Data</h2>
-        <p class="fade-in delay-3">
-          Analisis dilakukan menggunakan <strong>QGIS</strong> dengan tahapan: pengolahan shapefile, agregasi data kasus per kabupaten/kota,
-          klasifikasi warna (graduated color), dan ekspor peta final. Pendekatan ini memungkinkan interpretasi yang lebih akurat
-          terhadap distribusi spasial kasus kekerasan anak.
-        </p>
-
-        <!-- Statistik Ringkas -->
-        <div class="stat-wrap">
-          <div class="stat-item zoom-in delay-1">
-            <h3>35</h3>
-            <p>Kab/Kota Dianalisis</p>
-          </div>
-
-          <div class="stat-item zoom-in delay-2">
-            <h3>2022</h3>
-            <p>Tahun Analisis 1</p>
-          </div>
-
-          <div class="stat-item zoom-in delay-3">
-            <h3>2023</h3>
-            <p>Tahun Analisis 2</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- RINGKASAN ILUSTRASI -->
-    <div class="bottom-illustration fade-in">
-      <h2>Ringkasan Inti Penelitian</h2>
-      <p style="font-size:15px; line-height:1.7; margin-bottom:18px;">
-        Penelitian ini memetakan persebaran kasus kekerasan anak di Jawa Tengah tahun 2022–2023.
-        Melalui pemodelan spasial menggunakan SIG, wilayah dengan tingkat kejadian tinggi dan perubahan signifikan
-        antar tahun dapat diidentifikasi dengan jelas.
+      <p class="fade-in delay-2">
+        Kekerasan terhadap anak merupakan masalah serius yang berdampak pada perkembangan psikologis,
+        emosional, serta masa depan anak. Untuk memahami persebarannya, analisis berbasis
+        <strong>Sistem Informasi Geografis (SIG)</strong> digunakan agar pola spasial kasus dapat terlihat jelas.
       </p>
 
-      <ul style="margin-left:18px; line-height:1.8;">
-        <li><b>Kasus meningkat/menurun tidak merata</b> pada tiap wilayah.</li>
-        <li><b>Beberapa kabupaten menunjukkan konsistensi kasus tinggi</b> di dua tahun.</li>
-        <li><b>Peta tematik</b> memudahkan identifikasi pola persebaran.</li>
-        <li>Hasil analisis dapat digunakan sebagai dasar kebijakan perlindungan anak.</li>
+      <div class="info-box fade-in delay-3">
+        <strong>Data 2023–2024 menunjukkan bahwa kasus kekerasan anak di Jawa Tengah mengalami perubahan signifikan.</strong><br>
+        Tahun 2023 tercatat <b>1.224 kasus</b>, sedangkan tahun 2024 meningkat menjadi <b>1.304 kasus</b>.
+        Kenaikan sebanyak <b>80 kasus</b> ini menunjukkan perlunya perhatian lebih dari pemerintah dan masyarakat.
+      </div>
+
+      <h2 class="slide-right">Tujuan Penelitian</h2>
+      <ul class="slide-right delay-1">
+        <li>Menganalisis persebaran kasus kekerasan anak tahun 2023 dan 2024.</li>
+        <li>Mengidentifikasi wilayah dengan peningkatan atau penurunan kasus.</li>
+        <li>Menyajikan peta tematik berbasis QGIS yang menggambarkan distribusi spasial kasus.</li>
       </ul>
+
+      <h2 class="slide-right delay-2">Metode Pengolahan Data</h2>
+      <p class="fade-in delay-3">
+        Data kasus dari setiap kabupaten/kota diolah menggunakan <strong>QGIS</strong> dengan proses meliputi:
+        integrasi shapefile, input data tabular dari PDF, klasifikasi warna (graduated color),
+        dan penyusunan peta interaktif. Pendekatan spasial ini membantu melihat wilayah risiko tinggi
+        dan tren perubahan antar tahun.
+      </p>
+
+      <!-- Statistik Ringkas -->
+      <div class="stat-wrap">
+        <div class="stat-item zoom-in delay-1">
+          <h3>35</h3>
+          <p>Kab/Kota</p>
+        </div>
+
+        <div class="stat-item zoom-in delay-2">
+          <h3>2023</h3>
+          <p>Total 1.224 Kasus</p>
+        </div>
+
+        <div class="stat-item zoom-in delay-3">
+          <h3>2024</h3>
+          <p>Total 1.304 Kasus</p>
+        </div>
+      </div>
     </div>
+  </div>
 
-  </main>
+  <div class="bottom-illustration fade-in">
+    <h2>Ringkasan Inti Penelitian</h2>
+    <p style="font-size:15px; line-height:1.7; margin-bottom:18px;">
+      Berdasarkan data 2023–2024, sebagian wilayah mengalami peningkatan kasus cukup tajam
+      seperti Magelang (+62) dan Kota Semarang (+25). Di sisi lain, beberapa daerah menunjukkan
+      penurunan signifikan seperti Cilacap (-82) dan Kota Surakarta (-61).
+      Pemetaan spasial memungkinkan analisis lebih mendalam untuk melihat pola sebaran
+      dan wilayah prioritas penanganan.
+    </p>
 
-  <!-- FOOTER -->
-  <footer class="site-footer fade-in">
-    <div class="container">
-      <p>© 2025 — Pendahuluan</p>
-    </div>
-  </footer>
+    <ul style="margin-left:18px; line-height:1.8;">
+      <li><b>Pola kenaikan dan penurunan kasus sangat bervariasi</b> antar kabupaten/kota.</li>
+      <li><b>Peta tematik</b> membantu mengidentifikasi wilayah risiko tinggi.</li>
+      <li><b>Analisis spasial</b> memberikan dasar kuat untuk kebijakan perlindungan anak.</li>
+    </ul>
+  </div>
 
-  <script src="js/main.js"></script>
+</main>
+
+<footer class="site-footer fade-in">
+  <div class="container">
+    <p>© 2025 — Pendahuluan</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>

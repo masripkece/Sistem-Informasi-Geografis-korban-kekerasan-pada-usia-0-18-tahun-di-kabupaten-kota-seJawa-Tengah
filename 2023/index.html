@@ -36,6 +36,7 @@
         <script src="js/labels.js"></script>
         <script src="js/leaflet.photon.js"></script>
         <script src="data/pemetaankorbankekerasan_1.js"></script>
+        <script src="data/databenar_2.js"></script>
         <script>
         var map = L.map('map', {
             zoomControl:false, maxZoom:28, minZoom:1
@@ -131,7 +132,7 @@
                     </tr>\
                     <tr>\
                         <th scope="row">korban kekerasan</th>\
-                        <td>' + (feature.properties['k.kkrsn 23'] !== null ? autolinker.link(String(feature.properties['k.kkrsn 23']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td>' + (feature.properties['data benar_korban kekerasan pada tahun 2023'] !== null ? autolinker.link(String(feature.properties['data benar_korban kekerasan pada tahun 2023']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
@@ -142,7 +143,7 @@
         }
 
         function style_pemetaankorbankekerasan_1_0(feature) {
-            if (feature.properties['k.kkrsn 23'] >= 0.000000 && feature.properties['k.kkrsn 23'] <= 50.000000 ) {
+            if (feature.properties['data benar_korban kekerasan pada tahun 2023'] >= 0.000000 && feature.properties['data benar_korban kekerasan pada tahun 2023'] <= 46.330000 ) {
                 return {
                 pane: 'pane_pemetaankorbankekerasan_1',
                 opacity: 1,
@@ -157,7 +158,7 @@
                 interactive: true,
             }
             }
-            if (feature.properties['k.kkrsn 23'] >= 50.000000 && feature.properties['k.kkrsn 23'] <= 104.000000 ) {
+            if (feature.properties['data benar_korban kekerasan pada tahun 2023'] >= 46.330000 && feature.properties['data benar_korban kekerasan pada tahun 2023'] <= 93.000000 ) {
                 return {
                 pane: 'pane_pemetaankorbankekerasan_1',
                 opacity: 1,
@@ -172,7 +173,7 @@
                 interactive: true,
             }
             }
-            if (feature.properties['k.kkrsn 23'] >= 104.000000 && feature.properties['k.kkrsn 23'] <= 158.000000 ) {
+            if (feature.properties['data benar_korban kekerasan pada tahun 2023'] >= 93.000000 && feature.properties['data benar_korban kekerasan pada tahun 2023'] <= 140.000000 ) {
                 return {
                 pane: 'pane_pemetaankorbankekerasan_1',
                 opacity: 1,
@@ -202,8 +203,69 @@
         });
         bounds_group.addLayer(layer_pemetaankorbankekerasan_1);
         map.addLayer(layer_pemetaankorbankekerasan_1);
+        function pop_databenar_2(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['NO'] !== null ? autolinker.link(String(feature.properties['NO']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Kabupaten/Kota</th>\
+                        <td>' + (feature.properties['Kabupaten/Kota'] !== null ? autolinker.link(String(feature.properties['Kabupaten/Kota']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">korban kekerasan pada tahun 2023</th>\
+                        <td>' + (feature.properties['korban kekerasan pada tahun 2023'] !== null ? autolinker.link(String(feature.properties['korban kekerasan pada tahun 2023']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['Korban Kekerasan Pada tahun 2024'] !== null ? autolinker.link(String(feature.properties['Korban Kekerasan Pada tahun 2024']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_databenar_2_0() {
+            return {
+                pane: 'pane_databenar_2',
+                radius: 4.0,
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(164,113,88,1.0)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_databenar_2');
+        map.getPane('pane_databenar_2').style.zIndex = 402;
+        map.getPane('pane_databenar_2').style['mix-blend-mode'] = 'normal';
+        var layer_databenar_2 = new L.geoJson(json_databenar_2, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_databenar_2',
+            layerName: 'layer_databenar_2',
+            pane: 'pane_databenar_2',
+            onEachFeature: pop_databenar_2,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.circleMarker(latlng, style_databenar_2_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_databenar_2);
+        map.addLayer(layer_databenar_2);
         var overlaysTree = [
-            {label: 'pemetaan korban kekerasan <br /><table><tr><td style="text-align: center;"><img src="legend/pemetaankorbankekerasan_1_049Rendah0.png" /></td><td>0 - 49 (Rendah)</td></tr><tr><td style="text-align: center;"><img src="legend/pemetaankorbankekerasan_1_50104Sedang1.png" /></td><td>50 - 104 (Sedang)</td></tr><tr><td style="text-align: center;"><img src="legend/pemetaankorbankekerasan_1_105158Tinggi2.png" /></td><td>105 - 158 (Tinggi)</td></tr></table>', layer: layer_pemetaankorbankekerasan_1},
+            {label: '<img src="legend/databenar_2.png" /> data benar', layer: layer_databenar_2},
+            {label: 'pemetaan korban kekerasan <br /><table><tr><td style="text-align: center;"><img src="legend/pemetaankorbankekerasan_1_0460.png" /></td><td>0 – 46</td></tr><tr><td style="text-align: center;"><img src="legend/pemetaankorbankekerasan_1_46931.png" /></td><td>46 - 93</td></tr><tr><td style="text-align: center;"><img src="legend/pemetaankorbankekerasan_1_931402.png" /></td><td>93 - 140</td></tr></table>', layer: layer_pemetaankorbankekerasan_1},
             {label: "OSM Standard", layer: layer_OSMStandard_0},]
         var lay = L.control.layers.tree(null, overlaysTree,{
             //namedToggle: true,

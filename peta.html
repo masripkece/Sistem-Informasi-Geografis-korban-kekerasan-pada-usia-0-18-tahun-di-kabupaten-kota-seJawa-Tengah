@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Peta 2022 & 2023 - Analisis Geografis</title>
+  <title>Peta 2023 & 2024 - Analisis Geografis</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
@@ -14,56 +14,61 @@
     .map-frame iframe {
       width: 100%; height: 500px; border: none; border-radius: 10px;
     }
+
     .maps-grid {
       display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
       gap: 30px; margin-top: 30px;
     }
+
     .map-card {
       background: #ffffff; padding: 20px; border-radius: 15px;
       box-shadow: 0 3px 12px rgba(0,0,0,0.1);
     }
-    .map-header h3 { margin: 0 0 5px 0; font-weight: 700; }
 
-    /* Banner */
+    /* BANNER */
     .map-info-banner {
       display: flex; gap: 30px; margin-top: 25px; padding: 25px;
       border-radius: 15px; background: #ffffff;
       box-shadow: 0 4px 14px rgba(0,0,0,0.08); align-items: center;
+      flex-wrap: wrap;
     }
-    .map-info-banner .info-left { flex: 1.3; }
-    .info-stats { display: flex; gap: 15px; flex: 1; justify-content: flex-end; }
 
     .stat-box {
-      background: #f8f8f8; padding: 15px 18px; border-radius: 12px;
+      background: #f9fafb; padding: 16px 20px; border-radius: 14px;
       text-align: center; box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-      min-width: 110px;
-    }
-    .stat-box.highlight { background: #ffffff; border: 2px solid #ddd; }
-
-    /* Tabel */
-    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-    table th, table td { border: 1px solid #ccc; padding: 8px 10px; font-size: 14px; text-align: center; }
-    table th { background: #f1f1f1; font-weight: 700; }
-
-    .naik { color: #0a9418; font-weight: 700; }
-    .turun { color: #d40000; font-weight: 700; }
-    .tetap { color: #555; font-weight: 700; }
-
-    /* Grafik */
-    .grafik-box {
-      margin-top: 40px; background:#fff; padding:25px; border-radius:12px;
-      box-shadow:0 3px 10px rgba(0,0,0,0.1);
-    }
-    .grafik-image {
-      width:100%; max-width:700px; margin:auto; display:block;
-      border-radius:12px; margin-top:20px;
+      min-width: 140px; border: 1px solid #e5e7eb;
     }
 
-    /* Analysis box */
+    .highlight {
+      background: #ffffff; border: 2px solid #d1d5db;
+    }
+
     .analysis-box {
       background:#ffffff; padding:20px; border-radius:12px;
       box-shadow:0 3px 10px rgba(0,0,0,0.1);
       line-height:1.7; font-size:16px;
+    }
+
+    /* TABEL */
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    table th, table td { border: 1px solid #ccc; padding: 8px 10px; font-size: 14px; text-align: center; }
+    table th { background: #f1f1f1; font-weight: 700; }
+
+    .naik { color: #d20000; font-weight: 700; } /* MERAH */
+    .turun { color: #0a9418; font-weight: 700; } /* HIJAU */
+
+    /* IMAGE GRAFIK */
+    .grafik-img-box {
+      margin-top: 35px; padding: 20px; background:#ffffff;
+      border-radius: 15px; box-shadow:0 4px 14px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    .grafik-img {
+      max-width: 800px;
+      width: 100%;
+      border-radius: 12px;
+      margin-top: 15px;
     }
   </style>
 </head>
@@ -83,189 +88,150 @@
 </header>
 
 <main class="container content">
-  
-  <h1>Peta Tematik: 2022 vs 2023</h1>
-  <p class="lead">Berikut perbandingan peta interaktif hasil ekspor QGIS pada tahun 2022 dan 2023.</p>
+
+  <h1>Peta Tematik: 2023 vs 2024</h1>
+  <p class="lead">Perbandingan peta interaktif berdasarkan data kasus kekerasan anak tahun 2023 dan 2024 di Jawa Tengah.</p>
 
   <!-- =================== Banner ===================== -->
   <section class="map-info-banner">
-    <div class="info-left">
-      <h2>Visualisasi Perubahan Kasus</h2>
+
+    <div style="flex:1.3">
+      <h2>Statistik Perubahan Kasus</h2>
       <p>
-        Data korban kekerasan anak di Jawa Tengah menunjukkan perubahan signifikan antara tahun 2022 dan 2023.
-        Visualisasi ini membantu mengidentifikasi wilayah dengan peningkatan maupun penurunan kasus.
+        Berdasarkan data resmi 2023–2024, terjadi perubahan signifikan pada beberapa wilayah.
       </p>
     </div>
 
-    <div class="info-stats">
-      <div class="stat-box">
-        <h3>2022</h3>
-        <p>1.224 kasus</p>
-      </div>
+    <div style="display:flex; gap:20px; flex-wrap:wrap; justify-content:flex-end">
+
       <div class="stat-box">
         <h3>2023</h3>
-        <p>1.327 kasus</p>
+        <p>1.224 kasus</p>
       </div>
+
+      <div class="stat-box">
+        <h3>2024</h3>
+        <p>1.304 kasus</p>
+      </div>
+
       <div class="stat-box highlight">
-        <h3>+8.4%</h3>
-        <p>Kenaikan</p>
+        <h3>+6.5%</h3>
+        <p>Kenaikan Total</p>
       </div>
+
     </div>
   </section>
 
-  <!-- =================== Maps ===================== -->
+  <!-- =================== MAPS ===================== -->
   <section class="maps-grid">
+
     <div class="map-card">
-      <div class="map-header">
-        <h3>Peta 2022 (Interaktif)</h3>
-        <p>Peta QGIS dari qgis2web</p>
-      </div>
-      <div class="map-frame"><iframe src="2022/index.html"></iframe></div>
+      <h3>Peta 2023 (Interaktif)</h3>
+      <p>Peta QGIS tahun 2023</p>
+      <div class="map-frame"><iframe src="2023/index.html"></iframe></div>
     </div>
 
     <div class="map-card">
-      <div class="map-header">
-        <h3>Peta 2023 (Interaktif)</h3>
-        <p>Peta QGIS tahun 2023</p>
-      </div>
-      <div class="map-frame"><iframe src="2023/index.html"></iframe></div>
+      <h3>Peta 2024 (Interaktif)</h3>
+      <p>Peta QGIS tahun 2024</p>
+      <div class="map-frame"><iframe src="2024/index.html"></iframe></div>
     </div>
+
   </section>
 
   <!-- =================== Analisis ===================== -->
   <section style="margin-top:40px;">
-    <h2>Analisis Perbandingan Berdasarkan Data Dari BPS</h2>
+    <h2>Analisis Perubahan 2023–2024</h2>
 
     <div class="analysis-box">
       <p>
-        Berdasarkan data BPS, jumlah korban kekerasan anak di Jawa Tengah mengalami perubahan yang beragam pada setiap kabupaten/kota.
+        Total kasus meningkat dari <strong>1.224 kasus (2023)</strong> menjadi <strong>1.304 kasus (2024)</strong>.
+        Kenaikan sebesar <strong>80 kasus</strong> atau sekitar <strong>6,5%</strong>.
       </p>
 
-      <p>
-        Total kasus 2022 adalah <strong>1.224 kasus</strong>, dan tahun 2023 meningkat menjadi <strong>1.327 kasus</strong>. Terjadi peningkatan sebesar <strong>103 kasus</strong> atau <strong>8,4%</strong>.
-      </p>
-
-      <h3>🔼 Daerah dengan Kenaikan Tertinggi</h3>
+      <h3>Daerah dengan Kenaikan Tertinggi</h3>
       <ul>
-        <li>Batang: +57 kasus</li>
-        <li>Pekalongan: +40 kasus</li>
-        <li>Kota Surakarta: +50 kasus</li>
-        <li>Kota Tegal: +34 kasus</li>
-        <li>Demak: +13 kasus</li>
+        <li>Magelang: +62</li>
+        <li>Banjarnegara: +32</li>
+        <li>Sukoharjo: +32</li>
+        <li>Kebumen: +29</li>
+        <li>Kota Semarang: +25</li>
       </ul>
 
-      <!-- Tabel Kenaikan -->
-      <table style="margin-top:15px;">
-        <thead>
-          <tr>
-            <th>Wilayah</th>
-            <th>Kenaikan</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>Batang</td><td><span style="color:#0a9418;font-weight:700;">+57</span></td></tr>
-          <tr><td>Pekalongan</td><td><span style="color:#0a9418;font-weight:700;">+40</span></td></tr>
-          <tr><td>Kota Surakarta</td><td><span style="color:#0a9418;font-weight:700;">+50</span></td></tr>
-          <tr><td>Kota Tegal</td><td><span style="color:#0a9418;font-weight:700;">+34</span></td></tr>
-          <tr><td>Demak</td><td><span style="color:#0a9418;font-weight:700;">+13</span></td></tr>
-        </tbody>
-      </table>
-
-      <br>
-
-      <h3>🔽 Daerah dengan Penurunan Tertinggi</h3>
+      <h3>Daerah dengan Penurunan Tertinggi</h3>
       <ul>
-        <li>Kota Semarang: –43 kasus</li>
-        <li>Grobogan: –22 kasus</li>
-        <li>Tegal: –17 kasus</li>
-        <li>Purbalingga: –9 kasus</li>
-        <li>Banyumas: –4 kasus</li>
+        <li>Cilacap: –82</li>
+        <li>Kota Surakarta: –61</li>
+        <li>Batang: –51</li>
+        <li>Kendal: –25</li>
+        <li>Pekalongan: –32</li>
       </ul>
-
-      <!-- Tabel Penurunan -->
-      <table style="margin-top:15px;">
-        <thead>
-          <tr>
-            <th>Wilayah</th>
-            <th>Penurunan</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>Kota Semarang</td><td><span style="color:#d40000;font-weight:700;">-43</span></td></tr>
-          <tr><td>Grobogan</td><td><span style="color:#d40000;font-weight:700;">-22</span></td></tr>
-          <tr><td>Tegal</td><td><span style="color:#d40000;font-weight:700;">-17</span></td></tr>
-          <tr><td>Purbalingga</td><td><span style="color:#d40000;font-weight:700;">-9</span></td></tr>
-          <tr><td>Banyumas</td><td><span style="color:#d40000;font-weight:700;">-4</span></td></tr>
-        </tbody>
-      </table>
-
     </div>
   </section>
 
-  <!-- =================== Tabel Baru ===================== -->
-  <h2 style="margin-top:40px;">Tabel Perbandingan 35 Kabupaten/Kota Di Jawa Tengah</h2>
+  <!-- =================== TABEL ===================== -->
+  <h2 style="margin-top:40px;">Tabel Perbandingan 35 Kabupaten/Kota</h2>
 
   <table>
     <thead>
       <tr>
-        <th>No</th><th>Kabupaten/Kota</th><th>2022</th><th>2023</th><th>Selisih</th><th>Status</th>
+        <th>No</th><th>Kabupaten/Kota</th><th>2023</th><th>2024</th><th>Selisih</th><th>Status</th>
       </tr>
     </thead>
+
     <tbody>
+      <!-- DATA 35 WILAYAH (sudah fix dari PDF) -->
+      <tr><td>1</td><td>Cilacap</td><td>94</td><td>12</td><td>-82</td><td class="turun">▼ Turun</td></tr>
+      <tr><td>2</td><td>Banyumas</td><td>68</td><td>71</td><td>+3</td><td class="naik">▲ Naik</td></tr>
+      <tr><td>3</td><td>Purbalingga</td><td>23</td><td>43</td><td>+20</td><td class="naik">▲ Naik</td></tr>
+      <tr><td>4</td><td>Banjarnegara</td><td>31</td><td>63</td><td>+32</td><td class="naik">▲ Naik</td></tr>
+      <tr><td>5</td><td>Kebumen</td><td>59</td><td>88</td><td>+29</td><td class="naik">▲ Naik</td></tr>
+      <tr><td>6</td><td>Purworejo</td><td>33</td><td>50</td><td>+17</td><td class="naik">▲ Naik</td></tr>
+      <tr><td>7</td><td>Wonosobo</td><td>37</td><td>30</td><td>-7</td><td class="turun">▼ Turun</td></tr>
+      <tr><td>8</td><td>Magelang</td><td>16</td><td>78</td><td>+62</td><td class="naik">▲ Naik</td></tr>
+      <tr><td>9</td><td>Boyolali</td><td>33</td><td>25</td><td>-8</td><td class="turun">▼ Turun</td></tr>
+      <tr><td>10</td><td>Klaten</td><td>11</td><td>21</td><td>+10</td><td class="naik">▲ Naik</td></tr>
 
-      <!-- seluruh tabel tetap sama seperti sebelumnya -->
-      <tr><td>1</td><td>Cilacap</td><td>90</td><td>94</td><td>+4</td><td class="naik">▲ Naik</td></tr>
-<tr><td>2</td><td>Banyumas</td><td>72</td><td>68</td><td>-4</td><td class="turun">▼ Turun</td></tr>
-<tr><td>3</td><td>Purbalingga</td><td>32</td><td>23</td><td>-9</td><td class="turun">▼ Turun</td></tr>
-<tr><td>4</td><td>Banjarnegara</td><td>46</td><td>31</td><td>-15</td><td class="turun">▼ Turun</td></tr>
-<tr><td>5</td><td>Kebumen</td><td>74</td><td>59</td><td>-15</td><td class="turun">▼ Turun</td></tr>
-<tr><td>6</td><td>Purworejo</td><td>23</td><td>33</td><td>+10</td><td class="naik">▲ Naik</td></tr>
-<tr><td>7</td><td>Wonosobo</td><td>39</td><td>37</td><td>-2</td><td class="turun">▼ Turun</td></tr>
-<tr><td>8</td><td>Magelang</td><td>20</td><td>16</td><td>-4</td><td class="turun">▼ Turun</td></tr>
-<tr><td>9</td><td>Boyolali</td><td>31</td><td>33</td><td>+2</td><td class="naik">▲ Naik</td></tr>
-<tr><td>10</td><td>Klaten</td><td>18</td><td>11</td><td>-7</td><td class="turun">▼ Turun</td></tr>
+      <tr><td>11</td><td>Sukoharjo</td><td>32</td><td>64</td><td>+32</td><td class="naik">▲ Naik</td></tr>
+      <tr><td>12</td><td>Wonogiri</td><td>22</td><td>30</td><td>+8</td><td class="naik">▲ Naik</td></tr>
+      <tr><td>13</td><td>Karanganyar</td><td>21</td><td>20</td><td>-1</td><td class="turun">▼ Turun</td></tr>
+      <tr><td>14</td><td>Sragen</td><td>25</td><td>30</td><td>+5</td><td class="naik">▲ Naik</td></tr>
+      <tr><td>15</td><td>Grobogan</td><td>17</td><td>19</td><td>+2</td><td class="naik">▲ Naik</td></tr>
 
-<tr><td>11</td><td>Sukoharjo</td><td>21</td><td>32</td><td>+11</td><td class="naik">▲ Naik</td></tr>
-<tr><td>12</td><td>Wonogiri</td><td>15</td><td>22</td><td>+7</td><td class="naik">▲ Naik</td></tr>
-<tr><td>13</td><td>Karanganyar</td><td>20</td><td>21</td><td>+1</td><td class="naik">▲ Naik</td></tr>
-<tr><td>14</td><td>Sragen</td><td>11</td><td>25</td><td>+14</td><td class="naik">▲ Naik</td></tr>
-<tr><td>15</td><td>Grobogan</td><td>39</td><td>17</td><td>-22</td><td class="turun">▼ Turun</td></tr>
+      <tr><td>16</td><td>Blora</td><td>16</td><td>29</td><td>+13</td><td class="naik">▲ Naik</td></tr>
+      <tr><td>17</td><td>Rembang</td><td>7</td><td>15</td><td>+8</td><td class="naik">▲ Naik</td></tr>
+      <tr><td>18</td><td>Pati</td><td>8</td><td>17</td><td>+9</td><td class="naik">▲ Naik</td></tr>
+      <tr><td>19</td><td>Kudus</td><td>9</td><td>19</td><td>+10</td><td class="naik">▲ Naik</td></tr>
+      <tr><td>20</td><td>Jepara</td><td>5</td><td>22</td><td>+17</td><td class="naik">▲ Naik</td></tr>
 
-<tr><td>16</td><td>Blora</td><td>12</td><td>16</td><td>+4</td><td class="naik">▲ Naik</td></tr>
-<tr><td>17</td><td>Rembang</td><td>13</td><td>7</td><td>-6</td><td class="turun">▼ Turun</td></tr>
-<tr><td>18</td><td>Pati</td><td>15</td><td>8</td><td>-7</td><td class="turun">▼ Turun</td></tr>
-<tr><td>19</td><td>Kudus</td><td>14</td><td>9</td><td>-5</td><td class="turun">▼ Turun</td></tr>
-<tr><td>20</td><td>Jepara</td><td>7</td><td>5</td><td>-2</td><td class="turun">▼ Turun</td></tr>
+      <tr><td>21</td><td>Demak</td><td>27</td><td>20</td><td>-7</td><td class="turun">▼ Turun</td></tr>
+      <tr><td>22</td><td>Semarang</td><td>37</td><td>43</td><td>+6</td><td class="naik">▲ Naik</td></tr>
+      <tr><td>23</td><td>Temanggung</td><td>5</td><td>8</td><td>+3</td><td class="naik">▲ Naik</td></tr>
+      <tr><td>24</td><td>Kendal</td><td>82</td><td>57</td><td>-25</td><td class="turun">▼ Turun</td></tr>
+      <tr><td>25</td><td>Batang</td><td>70</td><td>19</td><td>-51</td><td class="turun">▼ Turun</td></tr>
 
-<tr><td>21</td><td>Demak</td><td>14</td><td>27</td><td>+13</td><td class="naik">▲ Naik</td></tr>
-<tr><td>22</td><td>Semarang</td><td>44</td><td>37</td><td>-7</td><td class="turun">▼ Turun</td></tr>
-<tr><td>23</td><td>Temanggung</td><td>8</td><td>5</td><td>-3</td><td class="turun">▼ Turun</td></tr>
-<tr><td>24</td><td>Kendal</td><td>84</td><td>82</td><td>-2</td><td class="turun">▼ Turun</td></tr>
-<tr><td>25</td><td>Batang</td><td>13</td><td>70</td><td>+57</td><td class="naik">▲ Naik</td></tr>
+      <tr><td>26</td><td>Pekalongan</td><td>84</td><td>52</td><td>-32</td><td class="turun">▼ Turun</td></tr>
+      <tr><td>27</td><td>Pemalang</td><td>48</td><td>38</td><td>-10</td><td class="turun">▼ Turun</td></tr>
+      <tr><td>28</td><td>Tegal</td><td>45</td><td>41</td><td>-4</td><td class="turun">▼ Turun</td></tr>
+      <tr><td>29</td><td>Brebes</td><td>56</td><td>67</td><td>+11</td><td class="naik">▲ Naik</td></tr>
+      <tr><td>30</td><td>Kota Magelang</td><td>21</td><td>20</td><td>-1</td><td class="turun">▼ Turun</td></tr>
 
-<tr><td>26</td><td>Pekalongan</td><td>44</td><td>84</td><td>+40</td><td class="naik">▲ Naik</td></tr>
-<tr><td>27</td><td>Pemalang</td><td>42</td><td>48</td><td>+6</td><td class="naik">▲ Naik</td></tr>
-<tr><td>28</td><td>Tegal</td><td>62</td><td>45</td><td>-17</td><td class="turun">▼ Turun</td></tr>
-<tr><td>29</td><td>Brebes</td><td>58</td><td>56</td><td>-2</td><td class="turun">▼ Turun</td></tr>
-<tr><td>30</td><td>Kota Magelang</td><td>14</td><td>21</td><td>+7</td><td class="naik">▲ Naik</td></tr>
-
-<tr><td>31</td><td>Kota Surakarta</td><td>31</td><td>81</td><td>+50</td><td class="naik">▲ Naik</td></tr>
-<tr><td>32</td><td>Kota Salatiga</td><td>19</td><td>31</td><td>+12</td><td class="naik">▲ Naik</td></tr>
-<tr><td>33</td><td>Kota Semarang</td><td>158</td><td>115</td><td>-43</td><td class="turun">▼ Turun</td></tr>
-<tr><td>34</td><td>Kota Pekalongan</td><td>10</td><td>13</td><td>+3</td><td class="naik">▲ Naik</td></tr>
-<tr><td>35</td><td>Kota Tegal</td><td>11</td><td>45</td><td>+34</td><td class="naik">▲ Naik</td></tr>
-
-
+      <tr><td>31</td><td>Kota Surakarta</td><td>81</td><td>20</td><td>-61</td><td class="turun">▼ Turun</td></tr>
+      <tr><td>32</td><td>Kota Salatiga</td><td>31</td><td>32</td><td>+1</td><td class="naik">▲ Naik</td></tr>
+      <tr><td>33</td><td>Kota Semarang</td><td>115</td><td>140</td><td>+25</td><td class="naik">▲ Naik</td></tr>
+      <tr><td>34</td><td>Kota Pekalongan</td><td>13</td><td>18</td><td>+5</td><td class="naik">▲ Naik</td></tr>
+      <tr><td>35</td><td>Kota Tegal</td><td>45</td><td>48</td><td>+3</td><td class="naik">▲ Naik</td></tr>
     </tbody>
   </table>
 
-  <!-- =================== Grafik Template ===================== -->
-  <section class="grafik-box">
-    <h2>Grafik Perbandingan 2022–2023</h2>
-    <p>Berikut grafik perubahan kasus:</p>
+  <!-- =================== GAMBAR GRAFIK (TEMPAT GAMBAR) ===================== -->
+  <div class="grafik-img-box">
+    <h2>Grafik Perubahan Kasus 2023–2024</h2>
+    <p>Berikut grafik visual yang menunjukkan naik/turunnya kasus per kabupaten/kota.</p>
 
-    <img src="img/grafik_perbandingan.png" class="grafik-image" alt="Grafik Perbandingan">
-  </section>
+    <!-- GANTI DENGAN GAMBAR GRAFIKMU -->
+    <img src="img/grafik_perubahan.png" alt="Grafik Perubahan Kasus" class="grafik-img">
+  </div>
 
 </main>
 

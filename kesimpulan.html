@@ -5,15 +5,11 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Kesimpulan - Analisis Geografis</title>
 
-  <!-- FONT -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-  <!-- STYLE -->
   <link rel="stylesheet" href="css/style.css" />
 
   <style>
     h1, h2 { font-weight: 700; color: var(--accent-2); }
-
     .paper {
       background: var(--card);
       padding: 32px;
@@ -22,27 +18,23 @@
       animation: fadeUp .6s ease;
       border: 1px solid rgba(15,23,42,0.05);
     }
-
     .divider {
       width: 100%;
       height: 1px;
       background: rgba(0,0,0,0.06);
       margin: 28px 0;
     }
-
     main.container {
       max-width: 850px;
       margin-top: 40px;
       margin-bottom: 50px;
     }
-
     ol, ul { 
       padding-left: 22px; 
       line-height: 1.7;
       color: #333;
       font-size: 1.03rem;
     }
-
     .insight-box {
       margin-top: 25px;
       padding: 20px;
@@ -50,14 +42,12 @@
       border-radius: 14px;
       border: 1px solid #e2e8f0;
     }
-
     .insight-title {
       font-size: 1.2rem;
       font-weight: 600;
       margin-bottom: 8px;
       color: #1e293b;
     }
-
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(20px); }
       to   { opacity: 1; transform: translateY(0); }
@@ -66,75 +56,105 @@
 </head>
 
 <body>
-  <!-- HEADER -->
-  <header class="site-header small">
-    <div class="container header-inner">
-      <a class="logo" href="index.html">Analisis Geografis</a>
-      <nav class="nav">
-        <a href="index.html">Beranda</a>
-        <a href="pendahuluan.html">Pendahuluan</a>
-        <a href="peta.html">Peta</a>
-        <a href="kesimpulan.html" class="active">Kesimpulan</a>
-      </nav>
+
+<header class="site-header small">
+  <div class="container header-inner">
+    <a class="logo" href="index.html">Analisis Geografis</a>
+    <nav class="nav">
+      <a href="index.html">Beranda</a>
+      <a href="pendahuluan.html">Pendahuluan</a>
+      <a href="peta.html">Peta</a>
+      <a href="kesimpulan.html" class="active">Kesimpulan</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container content">
+
+  <div class="paper">
+    <h1>Kesimpulan dan Rekomendasi</h1>
+    <p style="color:var(--muted);margin-top:-6px;margin-bottom:20px;">
+      Ringkasan akhir berdasarkan analisis data korban kekerasan anak tahun 2023–2024 di Jawa Tengah.
+    </p>
+
+    <!-- ======================= KESIMPULAN ======================= -->
+    <ol>
+      <li>
+        Berdasarkan data tahun <b>2023 sebesar 1.224 kasus</b> dan tahun <b>2024 sebesar 1.304 kasus</b>, terjadi
+        peningkatan total <b>80 kasus</b> atau sekitar <b>6,5%</b>. Hal ini menunjukkan bahwa secara keseluruhan,
+        kecenderungan kekerasan terhadap anak di Jawa Tengah masih mengalami kenaikan.
+      </li>
+
+      <li>
+        Peningkatan terbesar terjadi di <b>Kabupaten Magelang (+62 kasus)</b>, 
+        <b>Banjarnegara (+32)</b>, <b>Sukoharjo (+32)</b>, 
+        <b>Kebumen (+29)</b>, dan <b>Kota Semarang (+25)</b> 
+      
+        sehingga wilayah tersebut perlu mendapatkan perhatian khusus dalam mitigasi dan pencegahan.
+      </li>
+
+      <li>
+        Penurunan kasus signifikan terjadi di <b>Cilacap (–82 kasus)</b>, 
+        <b>Kota Surakarta (–61)</b>, <b>Batang (–51)</b>, 
+        <b>Kendal (–25)</b>, dan <b>Pekalongan (–32)</b> 
+        yang menunjukkan adanya kemungkinan keberhasilan intervensi atau perbedaan tingkat pelaporan pada daerah tersebut.
+      </li>
+
+      <li>
+        Analisis spasial menunjukkan bahwa perubahan tidak terjadi merata. Beberapa wilayah mengalami
+        kenaikan ekstrem, sementara wilayah lain justru mengalami penurunan tajam, sehingga diperlukan
+        pendekatan kebijakan yang berbeda antara wilayah urban, semi-urban, dan rural.
+      </li>
+
+      <li>
+        Visualisasi peta tematik membantu memetakan titik-titik wilayah yang mengalami perubahan signifikan,
+        sehingga dapat menjadi dasar penting untuk perencanaan kebijakan perlindungan anak yang
+        lebih terarah dan berbasis data.
+      </li>
+    </ol>
+
+    <div class="divider"></div>
+
+    <h2>Insight Analisis</h2>
+
+    <div class="insight-box">
+      <div class="insight-title">Pola Persebaran Kasus Berdasarkan Data</div>
+      <ul>
+        <li>Wilayah dengan <b>kenaikan terbesar</b> seperti Magelang, Banjarnegara, Kebumen, dan Sukoharjo memiliki tren peningkatan yang tajam dibanding wilayah lain.</li>
+        <li>Penurunan ekstrem pada Cilacap dan Kota Surakarta menunjukkan adanya perubahan perilaku pelaporan atau keberhasilan program perlindungan anak.</li>
+        <li>Kota Semarang tetap menjadi wilayah dengan jumlah kasus tinggi (140 kasus pada 2024) dan memerlukan dukungan layanan yang lebih kuat.</li>
+      </ul>
     </div>
-  </header>
 
-  <main class="container content">
-
-    <div class="paper">
-      <h1>Kesimpulan dan Rekomendasi</h1>
-      <p style="color:var(--muted);margin-top:-6px;margin-bottom:20px;">
-        Ringkasan akhir berdasarkan analisis data korban kekerasan anak 2022–2023 di Jawa Tengah.
-      </p>
-
-      <ol>
-        <li>Beberapa wilayah menunjukkan peningkatan jumlah kasus pada tahun 2023, menandakan perlunya evaluasi kebijakan perlindungan anak di tingkat lokal.</li>
-        <li>Peta persebaran mempermudah identifikasi wilayah risiko tinggi, sehingga intervensi dapat dilakukan secara terarah berdasarkan kebutuhan tiap kabupaten/kota.</li>
-            </ol>
-
-      <div class="divider"></div>
-
-      <h2>Insight Analisis</h2>
-
-      <div class="insight-box">
-        <div class="insight-title">Pola Persebaran Kasus</div>
-        <ul>
-          <li>Kasus lebih sering muncul di wilayah dengan jumlah penduduk tinggi serta pusat aktivitas sosial.</li>
-          <li>Wilayah urban memiliki pelaporan lebih lengkap dibanding daerah rural.</li>
-          <li>Kabupaten dengan akses layanan perlindungan lebih baik cenderung melaporkan lebih banyak kasus akibat tingginya kesadaran masyarakat.</li>
-        </ul>
-      </div>
-
-      <div class="insight-box">
-        <div class="insight-title">Faktor yang Mempengaruhi Jumlah Kasus</div>
-        <ul>
-          <li>Kurangnya pengawasan keluarga dan lingkungan.</li>
-          <li>Masih rendahnya pemahaman tentang pelaporan kasus kekerasan.</li>
-          <li>Tingkat ekonomi dan beban sosial di beberapa daerah.</li>
-          <li>Peningkatan kemampuan pelaporan pada tahun 2023 yang membuat data lebih terlihat.</li>
-        </ul>
-      </div>
-
-      <div class="insight-box">
-        <div class="insight-title">Rekomendasi Kebijakan</div>
-        <ul>
-          <li>Meningkatkan edukasi perlindungan anak melalui sekolah dan komunitas.</li>
-          <li>Menguatkan layanan pelaporan cepat dan pendampingan psikologis.</li>
-          <li>Kolaborasi rutin antara pemerintah daerah dan lembaga perlindungan anak.</li>
-          <li>Penerapan dashboard digital untuk memantau laporan secara realtime.</li>
-        </ul>
-      </div>
-
+    <div class="insight-box">
+      <div class="insight-title">Faktor Kemungkinan Penyebab Perubahan</div>
+      <ul>
+        <li>Peningkatan kemampuan pelaporan serta kesadaran masyarakat pada beberapa kabupaten.</li>
+        <li>Perbedaan jumlah penduduk dan kepadatan wilayah turut memengaruhi jumlah laporan kasus.</li>
+        <li>Faktor sosial-ekonomi, pengawasan keluarga, dan kondisi lingkungan yang heterogen antar kabupaten.</li>
+      </ul>
     </div>
 
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>© 2025 — Kesimpulan</p>
+    <div class="insight-box">
+      <div class="insight-title">Rekomendasi Kebijakan</div>
+      <ul>
+        <li>Pemerintah perlu memberi prioritas pada wilayah dengan kenaikan tinggi seperti Magelang, Banjarnegara, Sukoharjo, Kebumen, dan Kota Semarang.</li>
+        <li>Meningkatkan kualitas dan ketersediaan layanan pelaporan, termasuk pendampingan psikologis anak.</li>
+        <li>Mengembangkan dashboard digital pemantauan kasus di seluruh Kabupaten/Kota Jawa Tengah.</li>
+        <li>Kolaborasi lintas sektor untuk edukasi dan pemantauan keluarga berisiko tinggi.</li>
+      </ul>
     </div>
-  </footer>
 
-  <script src="js/main.js"></script>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2025 — Kesimpulan</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>
