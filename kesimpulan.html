@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kesimpulan - Analisis Geografis</title>
+
+  <!-- FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- STYLE -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+    h1, h2 { font-weight: 700; color: var(--accent-2); }
+
+    .paper {
+      background: var(--card);
+      padding: 32px;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      animation: fadeUp .6s ease;
+      border: 1px solid rgba(15,23,42,0.05);
+    }
+
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: rgba(0,0,0,0.06);
+      margin: 28px 0;
+    }
+
+    main.container {
+      max-width: 850px;
+      margin-top: 40px;
+      margin-bottom: 50px;
+    }
+
+    ol, ul { 
+      padding-left: 22px; 
+      line-height: 1.7;
+      color: #333;
+      font-size: 1.03rem;
+    }
+
+    .insight-box {
+      margin-top: 25px;
+      padding: 20px;
+      background: #f1f5f9;
+      border-radius: 14px;
+      border: 1px solid #e2e8f0;
+    }
+
+    .insight-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #1e293b;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="site-header small">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Analisis Geografis</a>
+      <nav class="nav">
+        <a href="index.html">Beranda</a>
+        <a href="pendahuluan.html">Pendahuluan</a>
+        <a href="peta.html">Peta</a>
+        <a href="kesimpulan.html" class="active">Kesimpulan</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container content">
+
+    <div class="paper">
+      <h1>Kesimpulan dan Rekomendasi</h1>
+      <p style="color:var(--muted);margin-top:-6px;margin-bottom:20px;">
+        Ringkasan akhir berdasarkan analisis data korban kekerasan anak 2022–2023 di Jawa Tengah.
+      </p>
+
+      <ol>
+        <li>Beberapa wilayah menunjukkan peningkatan jumlah kasus pada tahun 2023, menandakan perlunya evaluasi kebijakan perlindungan anak di tingkat lokal.</li>
+        <li>Peta persebaran mempermudah identifikasi wilayah risiko tinggi, sehingga intervensi dapat dilakukan secara terarah berdasarkan kebutuhan tiap kabupaten/kota.</li>
+            </ol>
+
+      <div class="divider"></div>
+
+      <h2>Insight Analisis</h2>
+
+      <div class="insight-box">
+        <div class="insight-title">Pola Persebaran Kasus</div>
+        <ul>
+          <li>Kasus lebih sering muncul di wilayah dengan jumlah penduduk tinggi serta pusat aktivitas sosial.</li>
+          <li>Wilayah urban memiliki pelaporan lebih lengkap dibanding daerah rural.</li>
+          <li>Kabupaten dengan akses layanan perlindungan lebih baik cenderung melaporkan lebih banyak kasus akibat tingginya kesadaran masyarakat.</li>
+        </ul>
+      </div>
+
+      <div class="insight-box">
+        <div class="insight-title">Faktor yang Mempengaruhi Jumlah Kasus</div>
+        <ul>
+          <li>Kurangnya pengawasan keluarga dan lingkungan.</li>
+          <li>Masih rendahnya pemahaman tentang pelaporan kasus kekerasan.</li>
+          <li>Tingkat ekonomi dan beban sosial di beberapa daerah.</li>
+          <li>Peningkatan kemampuan pelaporan pada tahun 2023 yang membuat data lebih terlihat.</li>
+        </ul>
+      </div>
+
+      <div class="insight-box">
+        <div class="insight-title">Rekomendasi Kebijakan</div>
+        <ul>
+          <li>Meningkatkan edukasi perlindungan anak melalui sekolah dan komunitas.</li>
+          <li>Menguatkan layanan pelaporan cepat dan pendampingan psikologis.</li>
+          <li>Kolaborasi rutin antara pemerintah daerah dan lembaga perlindungan anak.</li>
+          <li>Penerapan dashboard digital untuk memantau laporan secara realtime.</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 — Kesimpulan</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Analisis Geografis dan Visualisasi Data Korban Kekerasan Anak - SIG</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+  
+  <style>
+    /* Style tambahan untuk card berita */
+    .overview { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin: 36px auto 80px; }
+    .card { background: var(--card); padding: 24px; border-radius: var(--radius); box-shadow: var(--shadow); border: 1px solid rgba(15,23,42,0.03); transition: transform .3s, box-shadow .3s; }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 14px 30px rgba(0,0,0,0.08); }
+    .card h3 { margin-top: 0; color: var(--accent-2); }
+    .card p { color: var(--muted); line-height: 1.5; }
+    .news-card .card-img { width: 100%; height: 160px; object-fit: cover; border-radius: 10px; margin-bottom: 12px; }
+    .news-card a { color: var(--accent); font-weight: 600; text-decoration: none; }
+    .news-card a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Analisis Geografis</a>
+      <nav class="nav">
+        <a href="index.html" class="active">Beranda</a>
+        <a href="pendahuluan.html">Pendahuluan</a>
+        <a href="peta.html">Peta</a>
+        <a href="kesimpulan.html">Kesimpulan</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SLIDER -->
+  <section class="hero">
+    <div class="bg-slider" id="bgSlider">
+      <div class="slide"
+        style="background-image:
+        linear-gradient(180deg, rgba(43,66,129,0.85), rgba(43,66,129,0.6)),
+        url('img/bg1.jpg');">
+      </div>
+      <div class="slide"
+        style="background-image:
+        linear-gradient(90deg, rgba(21,184,136,0.85), rgba(21,184,136,0.6)),
+        url('img/bg2.jpg');">
+      </div>
+    </div>
+
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h1>Analisis Geografis dan Visualisasi Data Korban Kekerasan Anak Usia 0–18 Tahun di Jawa Tengah Pada Tahun 2022 dan 2023</h1>
+        <p class="subtitle">Pendekatan Sistem Informasi Geografis (SIG) | Data 2022–2023</p>
+        <div class="hero-cta">
+          <a class="btn" href="peta.html">Lihat Peta 2022 &amp; 2023</a>
+          <a class="btn ghost" href="pendahuluan.html">Baca Pendahuluan</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Overview / Berita kekerasan anak di Jateng -->
+  <section class="overview container">
+    <!-- Berita 1 -->
+    <div class="card news-card">
+      <img class="card-img" src="img/blora-berita.jpg" alt="Kasus Kekerasan Anak di Blora">
+      <h3>Blora “Darurat” Kasus Kekerasan Seksual Anak</h3>
+      <p>Berdasarkan laporan Liputan6, meskipun Blora mendapat predikat Kabupaten Layak Anak, terdapat kasus pencabulan anak yang sangat mengkhawatirkan.</p>
+      <a href="https://www.liputan6.com/regional/read/5402119/katanya-blora-kabupaten-layak-anak-2023-faktanya-blora-darurat-pencabulan-anak" target="_blank">Baca selengkapnya</a>
+    </div>
+
+    <!-- Berita 2 -->
+    <div class="card news-card">
+      <img class="card-img" src="img/cilacap-anak.jpg" alt="Kekerasan Anak di Cilacap">
+      <h3>Derita 2 Anak Perempuan di Cilacap Korban Kekerasan Ayah Kandung</h3>
+      <p>Menurut Liputan6, dua anak perempuan di Majenang, Cilacap, menjadi korban kekerasan oleh ayah kandung mereka.</p>
+      <a href="https://www.liputan6.com/regional/read/4103002/derita-2-anak-perempuan-cilacap-korban-kekerasan-ayah-kandung" target="_blank">Baca selengkapnya</a>
+    </div>
+
+    <!-- Berita 3 -->
+    <div class="card news-card">
+      <img class="card-img" src="img/pppa-purworejo.png" alt="Kekerasan Anak di Purworejo">
+      <h3>Perlindungan Anak di Purworejo Jadi Sorotan Menteri PPPA</h3>
+      <p>Menteri PPPA menyatakan akan memperkuat perlindungan anak di Purworejo, Jateng setelah muncul kasus kekerasan seksual anak.</p>
+      <a href="https://www.kemenpppa.go.id/index.php/siaran-pers/menteri-pppa-pastikan-perlindungan-hak-anak-dalam-kasus-kekerasan-seksual-di-purworejo" target="_blank">Baca selengkapnya</a>
+    </div>
+
+    <!-- Berita 4 -->
+    <div class="card news-card">
+      <img class="card-img" src="img/pekalongan-anak.jpeg" alt="Kasus Kekerasan Anak di Pekalongan">
+      <h3>Polres Pekalongan Ungkap 3 Kasus Kekerasan Seksual Anak</h3>
+      <p>Polres Pekalongan mengungkap tiga kasus kekerasan seksual terhadap anak di bawah umur, salah satunya pelaku berusia lanjut.</p>
+      <a href="https://tribratanews.jateng.polri.go.id/2024/08/12/polres-pekalongan-ungkap-tiga-kasus-kekerasan-seksual-terhadap-anak-di-bawah-umur-dua-pelaku-sudah-lanjut-usia/" target="_blank">Baca selengkapnya</a>
+    </div>
+
+    <!-- Berita 5: Semarang -->
+    <div class="card news-card">
+      <img class="card-img" src="img/semarang-anak.jpg" alt="Kekerasan Anak di Semarang">
+      <h3>Semarang Catat Kasus Kekerasan Anak dan Perempuan Tertinggi di Jateng</h3>
+      <p>Kota Semarang mencatat kasus kekerasan anak dan perempuan tertinggi di Jawa Tengah. Laporan Kompas menyebut masyarakat lebih berani melapor.</p>
+      <a href="https://regional.kompas.com/read/2023/10/06/143955078/kota-semarang-catat-kasus-kekerasan-anak-dan-perempuan-tertinggi-se-jateng" target="_blank">Baca selengkapnya</a>
+    </div>
+
+    <!-- Berita 6: Brebes / Jateng umum -->
+    <div class="card news-card">
+      <img class="card-img" src="img/jateng-kekerasan-anak.jpeg" alt="Kasus Kekerasan Anak di Jateng">
+      <h3>1.900 Kasus Kekerasan Perempuan dan Anak di Jawa Tengah Sepanjang 2024</h3>
+      <p>Dinas DP3AKB Jawa Tengah melaporkan ada 1.900 kasus kekerasan terhadap perempuan dan anak di Jateng sepanjang 2024.</p>
+      <a href="https://www.detik.com/jateng/berita/d-7696230/ada-1-900-kasus-kekerasan-perempuan-anak-di-jateng-sepanjang-2024" target="_blank">Baca selengkapnya</a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Analisis Geografis — Visualisasi Data Korban Kekerasan Anak (0–18) Jawa Tengah</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
