@@ -157,12 +157,7 @@
         <li>Menyajikan peta tematik berbasis QGIS yang menggambarkan distribusi spasial kasus.</li>
       </ul>
 
-      <h2 class="slide-right delay-2">Metode Pengolahan Data</h2>
-      <p class="fade-in delay-3">
-        Data kasus dari setiap kabupaten/kota diolah menggunakan <strong>QGIS</strong> dengan proses meliputi:
-        integrasi shapefile, input data tabular dari PDF, klasifikasi warna (graduated color),
-        dan penyusunan peta interaktif. Pendekatan spasial ini membantu melihat wilayah risiko tinggi
-        dan tren perubahan antar tahun.
+.
       </p>
 
       <!-- Statistik Ringkas -->
@@ -195,11 +190,52 @@
       dan wilayah prioritas penanganan.
     </p>
 
-    <ul style="margin-left:18px; line-height:1.8;">
-      <li><b>Pola kenaikan dan penurunan kasus sangat bervariasi</b> antar kabupaten/kota.</li>
-      <li><b>Peta tematik</b> membantu mengidentifikasi wilayah risiko tinggi.</li>
-      <li><b>Analisis spasial</b> memberikan dasar kuat untuk kebijakan perlindungan anak.</li>
-    </ul>
+    <section aria-labelledby="metode-title">
+      <h2 id="metode-title" class="slide-right delay-2">
+        Metode Pengolahan Data
+      </h2>
+    
+      <ul class="method-list">
+        <li>
+          <p class="fade-in delay-3 note">
+            Data kasus dari setiap kabupaten/kota dikumpulkan dan diverifikasi dari
+            <strong>Badan Pusat Statistik (BPS) Provinsi Jawa Tengah</strong>
+            serta artikel dan jurnal ilmiah yang relevan yang tersedia melalui
+            <em>Google Scholar</em>.
+
+          </p>
+        </li>
+    
+        <li>
+          <p class="fade-in delay-3 note">
+            Proses visualisasi spasial dilakukan menggunakan
+            <strong>QGIS</strong> dengan tahapan sebagai berikut:
+          </p>
+          <ol class="fade-in delay-3 note">
+            <li>Integrasi shapefile batas administrasi kabupaten/kota.</li>
+            <li>Import data tabular (CSV/Excel) dan proses join atribut.</li>
+            <li>Klasifikasi nilai menggunakan <em>graduated colors</em>.</li>
+            <li>Penyusunan layer pendukung untuk konteks spasial.</li>
+          </ol>
+        </li>
+    
+        <li>
+          <p class="fade-in delay-3 note">
+            Pendekatan ini memungkinkan identifikasi wilayah risiko tinggi,
+            analisis tren perubahan antar tahun, serta mendukung rekomendasi
+            kebijakan perlindungan anak berbasis bukti.
+          </p>
+        </li>
+      </ul>
+    
+      <div class="sources">
+        <strong>Sumber Data & Rujukan:</strong>
+        <ul>
+          <li>BPS Provinsi Jawa Tengah.</li>
+          <li>Publikasi ilmiah melalui Google Scholar.</li>
+        </ul>
+      </div>
+    </section>
   </div>
 
 </main>
